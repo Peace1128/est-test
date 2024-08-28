@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="bg">
+        <img src="./logo.svg" alt="weniv logo">
+        <div class="timer">
+            <h1>TIMER</h1>
+            <div style="width: 312px;">
+                <div class="line-a"> </div>
+                <div class="line-b"> </div>
+            </div>
+            <div class="timer-area">
+                <div class="hrs">
+                    <p>HRS</p>
+                    <div class="hrs-area">
+                        <div class="timer-line"> </div>
+                        <input type="number" placeholder="00" id="Hours" min="0" max="99" oninput="checkNumber(this)" onchange="getHour()"></input>
+                        <div class="timer-line"> </div>
+                    </div>
+                </div>
+                <div class="dots">
+                    <div> </div>
+                    <div> </div>
+                </div>
+                <div class="min">
+                    <p>MIN</p>
+                    <div class="min-area">
+                        <div class="timer-line"> </div>
+                        <input type="number" placeholder="00" id="Min" min="0" max="99" oninput="checkNumber(this)" onchange="getMin()"></input>
+                        <div class="timer-line"> </div>
+                    </div>
+                </div>
+                <div class="dots">
+                    <div> </div>
+                    <div> </div>
+                </div>
+                <div class="sec">
+                    <p>SEC</p>
+                    <div class="sec-area">
+                        <div class="timer-line"> </div>
+                        <input type="number" placeholder="00" id="Sec" min="0" max="99" oninput="checkNumber(this)" onchange="getSec()"></input>
+                        <div class="timer-line"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-area">
+                <button class="start-default none" type="button" onclick=""><img src="./icon-start.svg"><p>START</p></button>
+                <button class="pause none" type="button"><img src="./icon-stop.svg"><p>PAUSE</p></button>
+                <button class="reset-default none" type="button"><img src="./icon-reset.svg"><p>RESET</p></button>
+                <button class="start-disabled flex" type="button"><img src="./icon-start-disabled.svg"><p>START</p></button>
+                <button class="reset-disabled flex" type="button"><img src="./icon-reset-disabled.svg"><p>RESET</p></button> 
+            </div>
+        </div>
+        <p class="copyright">ⓒ WENIV Corp.</p>
+    </div>
+</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+</html>
